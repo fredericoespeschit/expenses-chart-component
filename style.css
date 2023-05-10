@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* Content */
 .content {
   width: 100vw;
   height: 100vh;
@@ -12,15 +13,17 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background-color: hsl(27, 66%, 92%);
 }
 
+/* Balance */
 .balance {
   width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color:  hsl(10, 79%, 65%);
+  background-color: hsl(10, 79%, 65%);
   padding: 10px;
   border-radius: 6px;
 }
@@ -28,4 +31,23 @@
 .my-balance {
   display: flex;
   flex-direction: column;
+}
+/* The end Balance */
+
+/* Spending */
+.spending {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: hsl(33, 100%, 98%);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.horizontal-spending {
+  width: 90%;
+  padding: 10px;
+  border-top: 1px solid hsl(0, 86%, 34%);
 }
