@@ -5,8 +5,27 @@
 }
 
 .content {
-  width: 100wh;
+  width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.balance {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color:  hsl(10, 79%, 65%);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.my-balance {
   display: flex;
   flex-direction: column;
 }
