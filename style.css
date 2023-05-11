@@ -6,6 +6,7 @@
 
 /* Content */
 .content {
+  font-family: 'DM Sans';
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -31,23 +32,104 @@
 .my-balance {
   display: flex;
   flex-direction: column;
+  color:  hsl(33, 100%, 98%);
 }
+
+.my-balance :nth-child(1){
+  font-size: 12px;
+}
+.my-balance :nth-child(2){
+  font-size: 26px;
+}
+
+.logo-balance img {
+  width: 50px;
+  height: 50px;
+}
+
 /* The end Balance */
 
 /* Spending */
 .spending {
   width: 30%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   background-color: hsl(33, 100%, 98%);
   padding: 10px;
   border-radius: 6px;
+  margin-top: 5px;
+}
+
+.title-spending {
+  width: 100%;
+  font-size: 16px;
+}
+
+.week-spending {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day-week {
+  width: 20%;
+}
+
+.graphic {
+  width: 55%;
+  height: 80px;
+  border-radius: 8px;
+  background-color: hsl(10, 79%, 65%);
+}
+
+.day-week .active {
+  background-color: hsl(186, 34%, 60%);
 }
 
 .horizontal-spending {
-  width: 90%;
+  width: 100%;
   padding: 10px;
-  border-top: 1px solid hsl(0, 86%, 34%);
+  border-top: 1px solid hsl(27, 66%, 92%);
+}
+
+.total-spending {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.total-spending .this-month {
+  display: flex;
+  flex-direction: column;
+}
+.this-month :nth-child(1) {
+  font-size: 10px;
+  color: hsl(28, 10%, 53%);
+}
+.this-month :nth-child(2) {
+  font-size: 26px;
+  font-weight: 700;
+  color: hsl(25, 47%, 15%);
+}
+.total-spending .last-month {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: end;
+
+  font-size: 10px;
+}
+
+.last-month :nth-child(1) {
+  font-size: 10px;
+  font-weight: 700;
+  color: hsl(25, 47%, 15%);
+}
+
+.last-month :nth-child(2) {
+  font-size: 10px;
+  color: hsl(28, 10%, 53%);
 }

@@ -1,54 +1,75 @@
 <!DOCTYPE html>
 <html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Expenses Chart Component</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Expenses Chart Component</title>
-</head>
-
-<body>
-  <div class="conteiner">
-    <div class="content">
-      <div class="balance">
-        <div class="my-balance">
-          <span>My balance</span>
-          <span>$921.48</span>
-        </div>
-        <div class="logo-balance">
-          <img src="images/logo.svg" alt="">
-        </div>
-      </div>
-      <div class="spending">
-        <div class="title-spending"></div>
-        <div class="week-spending">
-          <div class="day-week">mon</div>
-          <div class="day-week">tue</div>
-          <div class="day-week">wed</div>
-          <div class="day-week">thu</div>
-          <div class="day-week">fri</div>
-          <div class="day-week">sat</div>
-          <div class="day-week">sun</div>
-        </div>
-        <div class="horizontal-spending">
-        </div>
-        <div class="total-spending">
-          <div>
-            <span>Total this month</span>
-            <span>$478.33</span>
+  <body>
+    <div class="conteiner">
+      <div class="content">
+        <div class="balance">
+          <div class="my-balance">
+            <span>My balance</span>
+            <span>$921.48</span>
           </div>
-          <div>
-            <span>+2.4%</span>
-            <span>from last month</span>
+          <div class="logo-balance">
+            <img src="images/logo.svg" alt="" />
+          </div>
+        </div>
+        <div class="spending">
+          <div class="title-spending">
+            <h1>Spending - Last 7 days</h1>
+          </div>
+          <div class="week-spending">
+            <div class="day-week">
+              <div class="graphic"></div>
+              <span>mon</span>
+            </div>
+            <div class="day-week">
+              <div class="graphic"></div>
+              <span>tue</span>
+            </div>
+            <div class="day-week">
+              <div class="graphic active"></div>
+              <span>wed</span>
+            </div>
+            <div class="day-week">
+              <div class="graphic"></div>
+              <span>thu</span>
+            </div>
+            <div class="day-week">
+              <div class="graphic"></div>
+              <span>fri</span>
+            </div>
+            <div class="day-week">
+              <div class="graphic"></div>
+              <span>sat</span>
+            </div>
+            <div class="day-week">
+              <div class="graphic"></div>
+              <span>sun</span>
+            </div>
+          </div>
+          <div class="horizontal-spending"></div>
+          <div class="total-spending">
+            <div class="this-month">
+              <span>Total this month</span>
+              <span>$478.33</span>
+            </div>
+            <div class="last-month">
+              <span>+2.4%</span>
+              <span>from last month</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
