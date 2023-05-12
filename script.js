@@ -25,3 +25,37 @@ async function getDate(){
     dayNum.style.height= `${amounts[i]*2.5}px`;
   })
 }
+getDate();
+
+daysRect.forEach(rect => {
+  rect.addEventListener("mouseenter", (e)=>{
+    let amountDiv = document.createElement('div');
+
+    let curDayHov = e.target.parentNode;
+    let curDayHovClass = curDayHov.className;
+
+    function getAmount(){
+      for (let index in days){
+        if(days[index]==curDayHovClass){
+          if(days[index]=="sun") return amounts[6];
+          return amounts[index -1];
+        }
+      }
+    }
+    amountDiv.className.add('show');
+    amountDiv.textContent=`$${getAmount()}`;
+
+    curDayHov.insertBefore(amountDiv, curDayHov.firstChild);
+    amountDiv.style.bottom = `${e.target.clientHeight+40}px`
+  })
+})
+
+daysRect.forEach(rect=>{
+  rect.addEventListener("mouseleave", (e)=>{
+    let curDayHov=e.target.parentNode;
+    e.target.style.backgroundColor="hsl(10, 79%, 65%)";
+    currentDayRect.style.backgroundColor="hsl(186, 34%, 60%)";
+    curDayHov.removeChild(curDayHov.firstElementChild);
+  })
+})
+
