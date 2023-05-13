@@ -2,9 +2,9 @@
 
 ![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)
 
-**HTML, CSS and JavaScript.**
 
-## The challenge
+
+## Sobre o Projeto
 
 Desafio é construir esse componente do gráfico de barras e deixá-lo o mais próximo possível do design.
 
@@ -19,6 +19,8 @@ Seus usuários devem ser capazes de:
 - **Bônus**: veja as barras geradas dinamicamente com base nos dados fornecidos no arquivo JSON local
 
 
-## Deploying project
+## Deploy projeto
 
-- [Netlify](https://fredericoespeschit3.netlify.app/)
+- [https://fredericoespeschit3.netlify.app/](https://fredericoespeschit3.netlify.app/)
+
+**HTML, CSS and JavaScript.**
