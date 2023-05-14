@@ -18,10 +18,10 @@ async function getDate() {
   let data = await response.json();
   // console.log(data);
   for (let i = 0; i < data.lenght; i++) {
-    amounts[i] = data[i].amounts;
+    amounts[i] = data[i].amount;
   }
   daysRect.forEach((day, i) => {
-    dayNum.style.height = `${amounts[i] * 2.5}px`;
+    day.style.height = `${amounts[i] * 2.5}px`;
   })
 }
 getDate();
@@ -29,15 +29,16 @@ getDate();
 daysRect.forEach(rect => {
   rect.addEventListener("mouseenter", (e) => {
     // Cria um novo elemento <div>
-    let amountDiv = document.createElement('div');
+    let amountDiv = document.createElement("div");
     
     // Obtém o elemento pai do evento atual
     let curDayHov = e.target.parentNode;
 
     // Obtém a classe do elemento pai
-    let curDayHovClass = curDayHov.className.add();
-    console.log(curDayHovClass)
-    
+    let curDayHovClass = curDayHov.className;
+  
+    //Valor undefined 
+
     // Define a função getAmount()
     function getAmount() {
       // Percorre o array "days"
@@ -53,10 +54,14 @@ daysRect.forEach(rect => {
     }
 
     // Adiciona a classe 'show' ao elemento "amountDiv"
-    amountDiv.classList.add('show');
+    amountDiv.classList.add("show");
 
     // Define o conteúdo de texto do elemento "amountDiv" com o valor retornado por getAmount()
     amountDiv.textContent = `$${getAmount()}`;
+
+    if(curDayHov.className!=currentDayRect.parentNode.className) {
+      e.target.style.backgroundColor="#EF97B1";
+    }
 
     // Insere "amountDiv" como o primeiro filho de "curDayHov"
     curDayHov.insertBefore(amountDiv, curDayHov.firstChild);
